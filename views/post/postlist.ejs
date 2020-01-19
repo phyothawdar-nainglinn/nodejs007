@@ -1,0 +1,213 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partial/head %>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<% include ../partial/logo %>
+			<!-- End Logo Header -->
+<% include ../partial/navbar %>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+	<% include ../partial/sidebar %>
+		<!-- End Sidebar -->
+
+		<div class="main-panel">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Basic</h4>
+
+            </div>
+            <h4>Post Lists</h4>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="basic-datatables" class="display table table-striped table-hover" >
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Contant</th>
+                      <th>Author Name</th>
+                      <th>Author Email</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Title</th>
+                      <th>Contant</th>
+                      <th>Author Name</th>
+                      <th>Author Email</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <% for( var i=0 ;i< post.length ;i++){%>
+                    <tr>
+                      <td> <a href="/post/postdetail/<%= post[i]._id %>"> <%= post[i].title %><a></td>
+                      <td><%= post[i].contant %></td>
+                      <td><%= post[i].author.name %></td>
+                      <td><%= post[i].author.email %></td>
+                    </tr>
+                  <%}%>
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+		<% include ../partial/footer %>
+		</div>
+
+		<!-- Custom template | don't include it in your project! -->
+		<div class="custom-template">
+			<div class="title">Settings</div>
+			<div class="custom-content">
+				<div class="switcher">
+					<div class="switch-block">
+						<h4>Logo Header</h4>
+						<div class="btnSwitch">
+							<button type="button" class="changeLogoHeaderColor" data-color="dark"></button>
+							<button type="button" class="selected changeLogoHeaderColor" data-color="blue"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="purple"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="light-blue"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="green"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="orange"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="red"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="white"></button>
+							<br/>
+							<button type="button" class="changeLogoHeaderColor" data-color="dark2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="blue2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="purple2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="light-blue2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="green2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="orange2"></button>
+							<button type="button" class="changeLogoHeaderColor" data-color="red2"></button>
+						</div>
+					</div>
+					<div class="switch-block">
+						<h4>Navbar Header</h4>
+						<div class="btnSwitch">
+							<button type="button" class="changeTopBarColor" data-color="dark"></button>
+							<button type="button" class="changeTopBarColor" data-color="blue"></button>
+							<button type="button" class="changeTopBarColor" data-color="purple"></button>
+							<button type="button" class="changeTopBarColor" data-color="light-blue"></button>
+							<button type="button" class="changeTopBarColor" data-color="green"></button>
+							<button type="button" class="changeTopBarColor" data-color="orange"></button>
+							<button type="button" class="changeTopBarColor" data-color="red"></button>
+							<button type="button" class="changeTopBarColor" data-color="white"></button>
+							<br/>
+							<button type="button" class="changeTopBarColor" data-color="dark2"></button>
+							<button type="button" class="selected changeTopBarColor" data-color="blue2"></button>
+							<button type="button" class="changeTopBarColor" data-color="purple2"></button>
+							<button type="button" class="changeTopBarColor" data-color="light-blue2"></button>
+							<button type="button" class="changeTopBarColor" data-color="green2"></button>
+							<button type="button" class="changeTopBarColor" data-color="orange2"></button>
+							<button type="button" class="changeTopBarColor" data-color="red2"></button>
+						</div>
+					</div>
+					<div class="switch-block">
+						<h4>Sidebar</h4>
+						<div class="btnSwitch">
+							<button type="button" class="selected changeSideBarColor" data-color="white"></button>
+							<button type="button" class="changeSideBarColor" data-color="dark"></button>
+							<button type="button" class="changeSideBarColor" data-color="dark2"></button>
+						</div>
+					</div>
+					<div class="switch-block">
+						<h4>Background</h4>
+						<div class="btnSwitch">
+							<button type="button" class="changeBackgroundColor" data-color="bg2"></button>
+							<button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>
+							<button type="button" class="changeBackgroundColor" data-color="bg3"></button>
+							<button type="button" class="changeBackgroundColor" data-color="dark"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="custom-toggle">
+				<i class="flaticon-settings"></i>
+			</div>
+		</div>
+		<!-- End Custom template -->
+	</div>
+	<!--   Core JS Files   -->
+	<% include ../partial/script.ejs %>
+  <!-- Datatables -->
+	<script src="/assets/js/plugin/datatables/datatables.min.js"></script>
+	<!-- Atlantis JS -->
+
+	</script>
+</body>
+<script >
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>postlist</title>
+    <style media="screen">
+      table,td,tr,th {border: 1px solid black}
+    </style>
+  </head>
+  <body>
+    <h1>Post List Page</h1>
+    <table>
+      <thead>
+        <th>Title</th>
+        <th>Contant</th>
+        <th>Author Name</th>
+        <th>Author Email</th>
+      </thead>
+      <% for( var i=0 ;i< post.length ;i++){%>
+      <tr>
+        <td> <a href="/post/postdetail/<%= post[i]._id %>"> <%= post[i].title %><a></td>
+        <td><%= post[i].contant %></td>
+        <td><%= post[i].author.name %></td>
+        <td><%= post[i].author.email %></td>
+      </tr>
+    <%}%>
+    </table>
+
+
+  </body>
+</html> -->
