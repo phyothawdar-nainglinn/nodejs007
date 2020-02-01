@@ -33,7 +33,7 @@ app.use(session({
 }))
 
 // mongoose.connect('mongodb://127.0.0.1/mynodejs007');
-mongoose.connect('mongodb+srv://phyolay:phyo123@nodejs007-ua5bv.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://phyolay:phyo123@nodejs007-lby4y.mongodb.net/test?retryWrites=true&w=majority');
 var db=mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection error from server'));
 
